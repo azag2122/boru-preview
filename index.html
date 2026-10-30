@@ -87,12 +87,26 @@ a{color:inherit}
 .big-n span{position:absolute;right:0;bottom:0;opacity:0;translate:0 30px;transition:opacity .6s,translate .8s cubic-bezier(.2,.7,.2,1)}
 .big-n span:first-child{position:relative}
 .stage[data-step="1"] .big-n span:nth-child(1),.stage[data-step="2"] .big-n span:nth-child(2),.stage[data-step="3"] .big-n span:nth-child(3),.stage[data-step="4"] .big-n span:nth-child(4){opacity:1;translate:0 0}
-.plate{position:relative;width:min(43vw,84svh);aspect-ratio:871/830;filter:drop-shadow(0 34px 34px rgba(0,0,0,.35)) drop-shadow(0 6px 8px rgba(0,0,0,.25));translate:-2% 0}
-.plate img{position:absolute;inset:0;width:100%;height:100%;transition:opacity .7s cubic-bezier(.2,.7,.2,1),translate .9s cubic-bezier(.2,.7,.2,1),scale .9s cubic-bezier(.2,.7,.2,1)}
-.js .plate img+img{opacity:0;translate:0 -7%;scale:1.07}
-.stage[data-step="2"] .lp,.stage[data-step="3"] .lp,.stage[data-step="4"] .lp,
-.stage[data-step="3"] .lg,.stage[data-step="4"] .lg,
-.stage[data-step="4"] .ls{opacity:1!important;translate:0 0!important;scale:1!important}
+.plate{position:relative;width:min(39vw,76svh);aspect-ratio:1;translate:-2% 0}
+.plate .sh{position:absolute;left:3%;right:3%;top:7%;bottom:-3%;border-radius:50%;background:radial-gradient(closest-side,rgba(2,8,18,.7),rgba(2,8,18,.42) 66%,rgba(2,8,18,0));will-change:transform,opacity}
+.bw{position:absolute;inset:0;will-change:transform}
+.bw .bowl{position:absolute;inset:0;width:100%;height:100%}
+.pc{position:absolute;background-repeat:no-repeat;will-change:transform}
+.pc.rice{background:url(assets/img/ing-rice.webp) center/100% 100% no-repeat}
+.pc.salmon{background-image:url(assets/img/ing-salmon.webp)}
+.pc.chicken{background-image:url(assets/img/ing-chicken.webp)}
+.pc.avocado{background-image:url(assets/img/ing-avocado.webp)}
+.pc.cucumber{background-image:url(assets/img/ing-cucumber.webp)}
+.pc.edamame{background-image:url(assets/img/ing-edamame.webp)}
+.pc.cabbage{background-image:url(assets/img/ing-cabbage.webp)}
+.pc.scallion{background-image:url(assets/img/ing-scallion.webp)}
+.pc.sesame{background-image:url(assets/img/ing-sesame.webp)}
+.sauce{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.sauce path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.sauce .s0{stroke:rgba(30,10,0,.30);stroke-width:14;transform:translate(4px,8px)}
+.sauce .s1{stroke:#D56F32;stroke-width:14}
+.sauce .s2{stroke:#EF9A5A;stroke-width:8.5;transform:translate(-1px,-2px)}
+.sauce .s3{stroke:#FFE4C8;stroke-width:2.6;opacity:.75;transform:translate(-3px,-4.5px)}
 .legend{position:absolute;left:0;bottom:6vh;list-style:none;display:flex;gap:22px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
 .legend li{opacity:.4;transition:opacity .4s;display:flex;align-items:center;gap:8px}
 .legend li::before{content:"";width:22px;height:2px;background:currentColor;transition:width .5s}
@@ -170,7 +184,7 @@ a{color:inherit}
  .scrolly{display:block;padding:0}
  .stage{height:56svh;top:0;background:var(--navy);z-index:3;padding:0 var(--pad)}
  .disc{width:min(80vw,46svh);translate:-50% -50%}
- .plate{width:min(84vw,48svh);translate:0 0}
+ .plate{width:min(74vw,43svh);translate:0 0}
  .big-n{font-size:34vw;right:2vw;bottom:1svh}
  .legend{display:none}
  .steps{padding:0 var(--pad)}
@@ -201,7 +215,6 @@ a{color:inherit}
 }
 @media (prefers-reduced-motion:reduce){
  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
- .js .plate img+img{translate:0 0;scale:1}
 }
 </style>
 </head>
@@ -234,10 +247,130 @@ a{color:inherit}
       <div class="disc"></div>
       <div class="big-n d"><span>01</span><span>02</span><span>03</span><span>04</span></div>
       <div class="plate">
-        <img class="lr" src="assets/img/layer-rice.webp" width="871" height="830" alt="" decoding="async">
-        <img class="lp" src="assets/img/layer-protein.webp" width="871" height="830" alt="" decoding="async">
-        <img class="lg" src="assets/img/layer-greens.webp" width="871" height="830" alt="" decoding="async">
-        <img class="ls" src="assets/img/layer-sauce.webp" width="871" height="830" alt="" decoding="async">
+        <div class="sh"></div>
+        <div class="bw">
+        <img class="bowl" src="assets/img/ing-bowl.webp" width="1000" height="1000" alt="" decoding="async">
+        <div class="pc rice" data-s="1" style="left:4.75%;top:3.8%;width:90.5%;height:92.79%"></div>
+        <div class="pc salmon" data-s="2" style="left:9.2%;top:24.78%;width:14.6%;height:15.24%;background-position:0% 0%;background-size:593.37% 107.41%;transform:rotate(6.8deg)"></div>
+        <div class="pc salmon" data-s="2" style="left:18.88%;top:14.87%;width:13.55%;height:12.66%;background-position:20.2% 0%;background-size:639.29% 129.3%;transform:rotate(-6.8deg)"></div>
+        <div class="pc salmon" data-s="2" style="left:29.05%;top:6.35%;width:16.21%;height:16.37%;background-position:40.44% 0%;background-size:534.33% 100%;transform:rotate(1.8deg)"></div>
+        <div class="pc salmon" data-s="2" style="left:20.23%;top:32.83%;width:14.11%;height:14.35%;background-position:61.85% 0%;background-size:613.71% 114.04%;transform:rotate(-31.7deg)"></div>
+        <div class="pc salmon" data-s="2" style="left:25.52%;top:23.57%;width:13.23%;height:13.79%;background-position:80.55% 0%;background-size:654.88% 118.71%;transform:rotate(-1.1deg)"></div>
+        <div class="pc salmon" data-s="2" style="left:36.11%;top:16.8%;width:14.11%;height:14.44%;background-position:100% 0%;background-size:613.71% 113.41%;transform:rotate(23.5deg)"></div>
+        <div class="pc salmon" data-s="2" style="left:30.33%;top:34.97%;width:14.6%;height:15.24%;background-position:0% 0%;background-size:593.37% 107.41%;transform:rotate(-38.3deg)"></div>
+        <div class="pc salmon" data-s="2" style="left:37.7%;top:30.57%;width:13.55%;height:12.66%;background-position:20.2% 0%;background-size:639.29% 129.3%;transform:rotate(-33.3deg)"></div>
+        <div class="pc chicken" data-s="2" style="left:46.47%;top:5.38%;width:12.42%;height:15.24%;background-position:0% 0%;background-size:679.22% 100%;transform:rotate(-27deg)"></div>
+        <div class="pc chicken" data-s="2" style="left:59.27%;top:10.04%;width:14.11%;height:12.26%;background-position:17.91% 0%;background-size:597.71% 124.34%;transform:rotate(28.3deg)"></div>
+        <div class="pc chicken" data-s="2" style="left:70.28%;top:16.38%;width:14.27%;height:14.52%;background-position:38.32% 0%;background-size:590.96% 105%;transform:rotate(13.8deg)"></div>
+        <div class="pc chicken" data-s="2" style="left:43.74%;top:17.66%;width:13.39%;height:13.39%;background-position:58.18% 0%;background-size:630.12% 113.86%;transform:rotate(-13deg)"></div>
+        <div class="pc chicken" data-s="2" style="left:55.78%;top:19.12%;width:14.52%;height:14.68%;background-position:78.52% 0%;background-size:581.11% 103.85%;transform:rotate(29.1deg)"></div>
+        <div class="pc chicken" data-s="2" style="left:62.87%;top:28.16%;width:14.84%;height:13.39%;background-position:100% 0%;background-size:568.48% 113.86%;transform:rotate(-0.2deg)"></div>
+        <div class="pc chicken" data-s="2" style="left:45.38%;top:28.97%;width:12.42%;height:15.24%;background-position:0% 0%;background-size:679.22% 100%;transform:rotate(18deg)"></div>
+        <div class="pc chicken" data-s="2" style="left:53.47%;top:32.75%;width:14.11%;height:12.26%;background-position:17.91% 0%;background-size:597.71% 124.34%;transform:rotate(6.2deg)"></div>
+        <div class="pc cabbage" data-s="3" style="left:2.13%;top:37.83%;width:32.9%;height:26.53%;background-position:0% 0%;background-size:100% 100%;transform:rotate(95deg)"></div>
+        <div class="pc edamame" data-s="3" style="left:13.75%;top:56.13%;width:27.9%;height:27.9%;background-position:0% 0%;background-size:100% 100%;transform:rotate(15deg)"></div>
+        <div class="pc cucumber" data-s="3" style="left:63.06%;top:64.12%;width:15.08%;height:15.16%;background-position:0% 0%;background-size:502.14% 198.4%;transform:rotate(344.9deg)"></div>
+        <div class="pc cucumber" data-s="3" style="left:60.94%;top:70.87%;width:15%;height:15.08%;background-position:25.1% 0%;background-size:504.84% 199.47%;transform:rotate(305deg)"></div>
+        <div class="pc cucumber" data-s="3" style="left:53.87%;top:70.07%;width:15.16%;height:15.16%;background-position:50.2% 0%;background-size:499.47% 198.4%;transform:rotate(0.2deg)"></div>
+        <div class="pc cucumber" data-s="3" style="left:49.62%;top:75.79%;width:14.84%;height:14.68%;background-position:75.1% 0%;background-size:510.33% 204.95%;transform:rotate(75.5deg)"></div>
+        <div class="pc cucumber" data-s="3" style="left:43.29%;top:72.54%;width:15%;height:14.76%;background-position:100% 0%;background-size:504.84% 203.83%;transform:rotate(327.7deg)"></div>
+        <div class="pc cucumber" data-s="3" style="left:37.32%;top:76.07%;width:14.76%;height:14.76%;background-position:0% 100%;background-size:513.11% 203.83%;transform:rotate(169.2deg)"></div>
+        <div class="pc cucumber" data-s="3" style="left:32.47%;top:70.63%;width:15.08%;height:15.16%;background-position:0% 0%;background-size:502.14% 198.4%;transform:rotate(352.9deg)"></div>
+        <div class="pc avocado" data-s="3" style="left:62.07%;top:30.62%;width:30%;height:17.98%;background-position:0% 0%;background-size:290.32% 208.97%;transform:rotate(159deg)"></div>
+        <div class="pc avocado" data-s="3" style="left:66.79%;top:37.55%;width:25.16%;height:16.13%;background-position:48.7% 0%;background-size:346.15% 233%;transform:rotate(171.5deg)"></div>
+        <div class="pc avocado" data-s="3" style="left:65.77%;top:45.03%;width:29.11%;height:14.19%;background-position:95.69% 0%;background-size:299.17% 264.77%;transform:rotate(184deg)"></div>
+        <div class="pc avocado" data-s="3" style="left:64.61%;top:50.69%;width:27.74%;height:15.48%;background-position:0% 82.12%;background-size:313.95% 242.71%;transform:rotate(196.5deg)"></div>
+        <div class="pc avocado" data-s="3" style="left:60.21%;top:56.84%;width:30.32%;height:14.44%;background-position:49.15% 78.4%;background-size:287.23% 260.34%;transform:rotate(209deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:45.62%;top:42.8%;width:3.71%;height:3.39%;background-position:0% 0%;background-size:2310.87% 109.52%;transform:rotate(226.6deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:58.73%;top:43.73%;width:3.79%;height:3.47%;background-position:4.72% 0%;background-size:2261.7% 106.98%;transform:rotate(31.4deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:28.14%;top:24.66%;width:3.71%;height:3.31%;background-position:9.54% 0%;background-size:2310.87% 112.2%;transform:rotate(272.9deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:37.26%;top:48.66%;width:3.71%;height:3.31%;background-position:14.26% 0%;background-size:2310.87% 112.2%;transform:rotate(36.4deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:22.88%;top:55.31%;width:3.55%;height:3.55%;background-position:18.94% 0%;background-size:2415.91% 104.55%;transform:rotate(64deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:52.36%;top:32.2%;width:3.39%;height:3.55%;background-position:23.41% 0%;background-size:2530.95% 104.55%;transform:rotate(68.6deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:54.48%;top:43.81%;width:3.71%;height:3.71%;background-position:27.83% 0%;background-size:2310.87% 100%;transform:rotate(231.7deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:32.42%;top:48.79%;width:3.63%;height:3.55%;background-position:32.51% 0%;background-size:2362.22% 104.55%;transform:rotate(76.6deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:22.57%;top:30.56%;width:3.63%;height:3.31%;background-position:37.13% 0%;background-size:2362.22% 112.2%;transform:rotate(289.2deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:27.21%;top:28.52%;width:3.47%;height:3.71%;background-position:41.67% 0%;background-size:2472.09% 100%;transform:rotate(75.9deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:36.38%;top:23.15%;width:3.31%;height:3.23%;background-position:45.99% 0%;background-size:2592.68% 115%;transform:rotate(231.1deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:16.77%;top:51.46%;width:3.39%;height:3.63%;background-position:50.24% 0%;background-size:2530.95% 102.22%;transform:rotate(76.8deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:26.49%;top:34.64%;width:3.55%;height:3.55%;background-position:54.66% 0%;background-size:2415.91% 104.55%;transform:rotate(118.4deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:43.62%;top:44.2%;width:3.63%;height:3.63%;background-position:59.23% 0%;background-size:2362.22% 102.22%;transform:rotate(32.4deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:51.94%;top:38.06%;width:3.47%;height:3.55%;background-position:63.73% 0%;background-size:2472.09% 104.55%;transform:rotate(216.5deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:39.61%;top:34.01%;width:3.71%;height:3.31%;background-position:68.34% 0%;background-size:2310.87% 112.2%;transform:rotate(345.3deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:46.82%;top:28.15%;width:3.63%;height:3.63%;background-position:72.99% 0%;background-size:2362.22% 102.22%;transform:rotate(311.9deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:40.2%;top:46.2%;width:3.47%;height:3.63%;background-position:77.45% 0%;background-size:2472.09% 102.22%;transform:rotate(327deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:58.86%;top:45.58%;width:3.63%;height:3.63%;background-position:82.02% 0%;background-size:2362.22% 102.22%;transform:rotate(68.3deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:73.92%;top:31.88%;width:3.31%;height:3.63%;background-position:86.3% 0%;background-size:2592.68% 102.22%;transform:rotate(70.8deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:75.39%;top:57.06%;width:3.79%;height:3.63%;background-position:91.04% 0%;background-size:2261.7% 102.22%;transform:rotate(217.3deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:46.08%;top:41.65%;width:3.39%;height:3.63%;background-position:95.4% 0%;background-size:2530.95% 102.22%;transform:rotate(13.9deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:58.15%;top:52.21%;width:3.63%;height:3.23%;background-position:100% 0%;background-size:2362.22% 115%;transform:rotate(253.6deg)"></div>
+        <div class="pc scallion" data-s="4" style="left:25.11%;top:34.09%;width:3.71%;height:3.39%;background-position:0% 0%;background-size:2310.87% 109.52%;transform:rotate(214.7deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:38.64%;top:38.72%;width:2.42%;height:2.58%;background-position:0% 0%;background-size:3606.67% 228.12%;transform:rotate(259.3deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:32.72%;top:49.97%;width:2.18%;height:2.82%;background-position:3.03% 0%;background-size:4007.41% 208.57%;transform:rotate(201.4deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:74.89%;top:42.87%;width:2.26%;height:2.74%;background-position:5.79% 0%;background-size:3864.29% 214.71%;transform:rotate(100.9deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:64.06%;top:49.32%;width:2.58%;height:2.34%;background-position:8.67% 0%;background-size:3381.25% 251.72%;transform:rotate(6deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:31.33%;top:34.28%;width:2.18%;height:2.74%;background-position:11.85% 0%;background-size:4007.41% 214.71%;transform:rotate(21.8deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:29.24%;top:42.06%;width:2.42%;height:2.58%;background-position:14.64% 0%;background-size:3606.67% 228.12%;transform:rotate(206deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:28.46%;top:45.73%;width:2.66%;height:2.18%;background-position:17.73% 0%;background-size:3278.79% 270.37%;transform:rotate(320.7deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:75.28%;top:56.25%;width:2.5%;height:2.42%;background-position:21.03% 0%;background-size:3490.32% 243.33%;transform:rotate(248.8deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:52.73%;top:36.8%;width:2.66%;height:2.26%;background-position:24.21% 0%;background-size:3278.79% 260.71%;transform:rotate(12.6deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:17.46%;top:57.89%;width:2.74%;height:2.18%;background-position:27.58% 0%;background-size:3182.35% 270.37%;transform:rotate(252.3deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:53.6%;top:49.8%;width:2.5%;height:2.42%;background-position:30.92% 0%;background-size:3490.32% 243.33%;transform:rotate(229deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:46.81%;top:19.72%;width:2.42%;height:2.58%;background-position:34.03% 0%;background-size:3606.67% 228.12%;transform:rotate(114.8deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:57.72%;top:51.76%;width:2.1%;height:2.82%;background-position:36.93% 0%;background-size:4161.54% 208.57%;transform:rotate(196.6deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:74.3%;top:28.91%;width:2.34%;height:2.58%;background-position:39.7% 0%;background-size:3731.03% 228.12%;transform:rotate(265.4deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:70.05%;top:27.31%;width:2.58%;height:2.42%;background-position:42.76% 0%;background-size:3381.25% 243.33%;transform:rotate(329.4deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:33.59%;top:25.04%;width:2.5%;height:2.5%;background-position:45.96% 0%;background-size:3490.32% 235.48%;transform:rotate(324.3deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:70.4%;top:45.68%;width:2.66%;height:2.26%;background-position:49.19% 0%;background-size:3278.79% 260.71%;transform:rotate(284.6deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:74.09%;top:44.31%;width:2.5%;height:2.42%;background-position:52.43% 0%;background-size:3490.32% 243.33%;transform:rotate(225deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:37.42%;top:25.44%;width:2.5%;height:2.42%;background-position:55.57% 0%;background-size:3490.32% 243.33%;transform:rotate(219.2deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:21.43%;top:50.07%;width:2.82%;height:2.1%;background-position:58.93% 0%;background-size:3091.43% 280.77%;transform:rotate(357.6deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:77.46%;top:45.69%;width:2.74%;height:2.1%;background-position:62.4% 0%;background-size:3182.35% 280.77%;transform:rotate(139.8deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:68.93%;top:32.89%;width:2.82%;height:2.1%;background-position:65.9% 0%;background-size:3091.43% 280.77%;transform:rotate(158.6deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:58.39%;top:45.95%;width:2.18%;height:2.82%;background-position:68.91% 0%;background-size:4007.41% 208.57%;transform:rotate(270.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:23.11%;top:54.88%;width:2.5%;height:2.5%;background-position:71.93% 0%;background-size:3490.32% 235.48%;transform:rotate(173.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:24.39%;top:34.23%;width:2.34%;height:2.58%;background-position:74.93% 0%;background-size:3731.03% 228.12%;transform:rotate(179deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:62.51%;top:19.39%;width:2.74%;height:2.18%;background-position:78.24% 0%;background-size:3182.35% 270.37%;transform:rotate(92.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:31.12%;top:54.24%;width:2.18%;height:2.74%;background-position:81.14% 0%;background-size:4007.41% 214.71%;transform:rotate(244.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:35.86%;top:43.09%;width:2.82%;height:2.18%;background-position:84.53% 0%;background-size:3091.43% 270.37%;transform:rotate(326.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:61.94%;top:30.12%;width:2.18%;height:2.82%;background-position:87.39% 0%;background-size:4007.41% 208.57%;transform:rotate(321deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:31.52%;top:27.11%;width:2.74%;height:2.1%;background-position:90.74% 0%;background-size:3182.35% 280.77%;transform:rotate(71.5deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:40.91%;top:19.17%;width:2.18%;height:2.74%;background-position:93.55% 0%;background-size:4007.41% 214.71%;transform:rotate(329.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:69.74%;top:46.38%;width:2.42%;height:2.58%;background-position:96.58% 0%;background-size:3606.67% 228.12%;transform:rotate(209.9deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:40.5%;top:39.35%;width:2.74%;height:2.18%;background-position:100% 0%;background-size:3182.35% 270.37%;transform:rotate(178.7deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:78.96%;top:40.12%;width:2.34%;height:2.66%;background-position:0% 92.5%;background-size:3731.03% 221.21%;transform:rotate(256deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:66.46%;top:51.51%;width:2.42%;height:2.58%;background-position:2.95% 90.24%;background-size:3606.67% 228.12%;transform:rotate(60.9deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:45.47%;top:31.15%;width:2.34%;height:2.66%;background-position:5.98% 92.5%;background-size:3731.03% 221.21%;transform:rotate(77.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:39.95%;top:23.43%;width:2.66%;height:2.26%;background-position:8.96% 82.22%;background-size:3278.79% 260.71%;transform:rotate(177.8deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:28.59%;top:25.03%;width:2.26%;height:2.66%;background-position:12.24% 92.5%;background-size:3864.29% 221.21%;transform:rotate(353.5deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:47.18%;top:39.49%;width:2.26%;height:2.74%;background-position:15.09% 94.87%;background-size:3864.29% 214.71%;transform:rotate(11.3deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:55.77%;top:47.59%;width:2.18%;height:2.9%;background-position:17.91% 100%;background-size:4007.41% 202.78%;transform:rotate(255.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:53.81%;top:30.5%;width:2.5%;height:2.58%;background-position:20.74% 90.24%;background-size:3490.32% 228.12%;transform:rotate(284.9deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:36.65%;top:52.2%;width:2.58%;height:2.42%;background-position:23.9% 86.05%;background-size:3381.25% 243.33%;transform:rotate(163.7deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:18.86%;top:56.46%;width:2.34%;height:2.66%;background-position:27.07% 92.5%;background-size:3731.03% 221.21%;transform:rotate(85.5deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:41.56%;top:47.31%;width:2.42%;height:2.58%;background-position:0% 0%;background-size:3606.67% 228.12%;transform:rotate(226.5deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:43.4%;top:22.17%;width:2.18%;height:2.82%;background-position:3.03% 0%;background-size:4007.41% 208.57%;transform:rotate(235.8deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:79.65%;top:35.96%;width:2.26%;height:2.74%;background-position:5.79% 0%;background-size:3864.29% 214.71%;transform:rotate(246.4deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:27.28%;top:39.35%;width:2.58%;height:2.34%;background-position:8.67% 0%;background-size:3381.25% 251.72%;transform:rotate(64.3deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:26.64%;top:55.71%;width:2.18%;height:2.74%;background-position:11.85% 0%;background-size:4007.41% 214.71%;transform:rotate(257.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:32.05%;top:42.82%;width:2.42%;height:2.58%;background-position:14.64% 0%;background-size:3606.67% 228.12%;transform:rotate(124.5deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:65.53%;top:31.09%;width:2.66%;height:2.18%;background-position:17.73% 0%;background-size:3278.79% 270.37%;transform:rotate(221.2deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:66.51%;top:36.98%;width:2.5%;height:2.42%;background-position:21.03% 0%;background-size:3490.32% 243.33%;transform:rotate(285.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:58.71%;top:48.76%;width:2.66%;height:2.26%;background-position:24.21% 0%;background-size:3278.79% 260.71%;transform:rotate(335.7deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:57.87%;top:40.86%;width:2.74%;height:2.18%;background-position:27.58% 0%;background-size:3182.35% 270.37%;transform:rotate(163.3deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:63.79%;top:20.05%;width:2.5%;height:2.42%;background-position:30.92% 0%;background-size:3490.32% 243.33%;transform:rotate(135.6deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:57.12%;top:17.93%;width:2.42%;height:2.58%;background-position:34.03% 0%;background-size:3606.67% 228.12%;transform:rotate(286.8deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:71.89%;top:51.71%;width:2.1%;height:2.82%;background-position:36.93% 0%;background-size:4161.54% 208.57%;transform:rotate(234.5deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:22.66%;top:36.47%;width:2.34%;height:2.58%;background-position:39.7% 0%;background-size:3731.03% 228.12%;transform:rotate(294.6deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:63.61%;top:24.14%;width:2.58%;height:2.42%;background-position:42.76% 0%;background-size:3381.25% 243.33%;transform:rotate(76.8deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:82.4%;top:47.57%;width:2.5%;height:2.5%;background-position:45.96% 0%;background-size:3490.32% 235.48%;transform:rotate(351.8deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:52.95%;top:18.94%;width:2.66%;height:2.26%;background-position:49.19% 0%;background-size:3278.79% 260.71%;transform:rotate(115.3deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:80.2%;top:48.9%;width:2.5%;height:2.42%;background-position:52.43% 0%;background-size:3490.32% 243.33%;transform:rotate(125.5deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:26.18%;top:49.5%;width:2.5%;height:2.42%;background-position:55.57% 0%;background-size:3490.32% 243.33%;transform:rotate(198.1deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:68.94%;top:36.73%;width:2.82%;height:2.1%;background-position:58.93% 0%;background-size:3091.43% 280.77%;transform:rotate(10.2deg)"></div>
+        <div class="pc sesame" data-s="4" style="left:56.61%;top:45.73%;width:2.74%;height:2.1%;background-position:62.4% 0%;background-size:3182.35% 280.77%;transform:rotate(287.9deg)"></div>
+        <svg class="sauce" data-s="4" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true"><path class="s0" pathLength="1" d="M322 195 C313 219 244 301 279 313 C314 325 483 220 491 253 C499 285 297 446 317 469 C338 491 575 335 589 361 C603 387 367 571 384 592 C402 613 646 439 675 463 C703 487 505 671 523 706 C541 741 724 612 761 631 C798 650 715 763 703 798"/><path class="s1" pathLength="1" d="M322 195 C313 219 244 301 279 313 C314 325 483 220 491 253 C499 285 297 446 317 469 C338 491 575 335 589 361 C603 387 367 571 384 592 C402 613 646 439 675 463 C703 487 505 671 523 706 C541 741 724 612 761 631 C798 650 715 763 703 798"/><path class="s2" pathLength="1" d="M322 195 C313 219 244 301 279 313 C314 325 483 220 491 253 C499 285 297 446 317 469 C338 491 575 335 589 361 C603 387 367 571 384 592 C402 613 646 439 675 463 C703 487 505 671 523 706 C541 741 724 612 761 631 C798 650 715 763 703 798"/><path class="s3" pathLength="1" d="M322 195 C313 219 244 301 279 313 C314 325 483 220 491 253 C499 285 297 446 317 469 C338 491 575 335 589 361 C603 387 367 571 384 592 C402 613 646 439 675 463 C703 487 505 671 523 706 C541 741 724 612 761 631 C798 650 715 763 703 798"/></svg>
+        </div>
       </div>
       <ol class="legend"><li>Rice</li><li>Protein</li><li>Greens &amp; crunch</li><li>Sauce &amp; topping</li></ol>
     </div>
@@ -317,6 +450,56 @@ a{color:inherit}
   var rm=window.matchMedia('(prefers-reduced-motion: reduce)'), spin=document.getElementById('spin'), t=0;
   function tick(){t=0;var y=Math.min(window.scrollY,1400);spin.style.transform='rotate('+(y*0.045)+'deg)'}
   window.addEventListener('scroll',function(){if(!rm.matches&&!t){t=requestAnimationFrame(tick)}},{passive:true});
+})();
+</script>
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script>
+/* № 01 — ingredients fall into the bowl, scrubbed to scroll (forward and back). Reduced motion / no JS: finished bowl. */
+(function(){
+  if(!window.gsap||!window.ScrollTrigger)return;
+  gsap.registerPlugin(ScrollTrigger);
+  var plate=document.querySelector('.stage .plate'); if(!plate)return;
+  var bw=plate.querySelector('.bw'), sh=plate.querySelector('.sh'), steps=[].slice.call(document.querySelectorAll('.step'));
+  var seed=7; function rnd(a,b){seed=(seed*16807)%2147483647;return a+(b-a)*((seed-1)/2147483646)}
+  var GAP={sesame:.011,scallion:.022,rice:0}, DUR={sesame:.34,scallion:.4,rice:.62};
+  var mm=gsap.matchMedia();
+  mm.add({all:'all',mob:'(max-width:820px)',rm:'(prefers-reduced-motion: reduce)'},function(c){
+    if(c.conditions.rm)return;
+    var mob=c.conditions.mob; seed=7;
+    steps.forEach(function(st,si){
+      var s=si+1, els=[].slice.call(plate.querySelectorAll('.pc[data-s="'+s+'"]'));
+      var tl=gsap.timeline({scrollTrigger:{trigger:st,scrub:.7,invalidateOnRefresh:true,
+        start:s===1?(mob?'top 128%':'top 82%'):(mob?'top 112%':'top 92%'),
+        end:s===1?(mob?'top 62%':'top 6%'):(mob?'top 68%':'top 20%')}});
+      gsap.set(els,{autoAlpha:0});
+      var t=0, base=0, prev=null, lands=[];
+      if(s===4){
+        var ps=plate.querySelectorAll('.sauce path');
+        gsap.set(ps,{autoAlpha:0});
+        tl.set(ps,{autoAlpha:1},0).fromTo(ps,{strokeDashoffset:1,strokeDasharray:1},{strokeDashoffset:0,duration:.95,ease:'power1.inOut'},0);
+        base=.55;
+      }
+      els.forEach(function(el){
+        var g=el.classList[1];
+        if(g!==prev){ if(prev!==null) base=t+ (g==='sesame'?.05:.12); prev=g; t=base; lands.push(t+(DUR[g]||.5)); }
+        var r0=gsap.getProperty(el,'rotation'), d=DUR[g]||.5, extra=s===1?.45:0;
+        tl.set(el,{autoAlpha:1},t)
+          .fromTo(el,{y:function(){return -(plate.offsetTop+el.offsetTop+el.offsetHeight*1.4+60+innerHeight*extra)},rotation:r0+rnd(-55,55),scale:1.1},
+                     {y:0,rotation:r0,duration:d,ease:'power1.in'},t)
+          .to(el,{scale:g==='rice'?.96:.88,duration:.06,ease:'power1.out'},t+d)
+          .to(el,{scale:1,duration:.28,ease:'back.out(4)'},t+d+.06);
+        t+=GAP[g]!==undefined?GAP[g]:.075;
+      });
+      lands.forEach(function(lt,i){
+        var k=s===1?1.6:(i?1:1.2);
+        tl.to(bw,{yPercent:.7*k,scale:1-.008*k,duration:.06,ease:'power1.out'},lt)
+          .to(bw,{yPercent:0,scale:1,duration:.34,ease:'back.out(3)'},lt+.06)
+          .to(sh,{scale:1-.02*k,opacity:1,duration:.06},lt)
+          .to(sh,{scale:1,opacity:.9,duration:.34},lt+.06);
+      });
+    });
+  });
 })();
 </script>
 </body>
