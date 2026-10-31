@@ -4,8 +4,8 @@
 <meta name="robots" content="noindex">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Boru — Fresh. Healthy. Filling. Opening 2027 in the UAE</title>
-<meta name="description" content="Boru makes rice bowls to order. Fresh, healthy, filling. Dine in or take away. Opening 2027 in the UAE.">
+<title>Bōru — Big bowls. Small menu. Opening in the UAE, 2027</title>
+<meta name="description" content="Bōru: Asian bowls, made to order. Dine in or take away. Opening in the UAE, 2027.">
 <meta name="theme-color" content="#09182F">
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="preload" href="assets/fonts/brico.woff2" as="font" type="font/woff2" crossorigin>
@@ -40,7 +40,7 @@ a{color:inherit}
 .bar nav a:hover,.bar nav a:focus-visible{border-color:currentColor}
 .bar .tag{display:flex;align-items:center;gap:10px}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--pers);display:inline-block}
-.hero h1{grid-column:1/-1;align-self:center;position:relative;z-index:3;font-size:clamp(96px,14vw,260px);color:var(--navy);margin:3vh 0 0;pointer-events:none}
+.hero h1{grid-column:1/-1;align-self:center;position:relative;z-index:3;font-size:clamp(80px,9.6vw,180px);color:var(--navy);margin:3vh 0 0;pointer-events:none}
 .hero h1 span{display:block}
 .hero h1 .l2{margin-left:12vw}
 .hero h1 .l3{font-family:Instr,Georgia,serif;font-style:italic;font-weight:400;font-stretch:100%;letter-spacing:-.035em;color:var(--pers);font-size:1.13em;line-height:.8;margin-left:2.2vw}
@@ -138,10 +138,13 @@ a{color:inherit}
 .sides .s{font-size:clamp(40px,4.4vw,72px);line-height:1}
 .sides .sides-list{flex-basis:100%;margin:-6px 0 0 calc(clamp(40px,4.4vw,72px)*.62 + 24px);font-size:clamp(18px,1.5vw,24px);line-height:1.35;opacity:.85}
 .sides .plus{font-family:Brico;font-weight:800;font-size:clamp(40px,4.4vw,72px);color:var(--pers);line-height:.8}
-.cluster{grid-column:8/-1;grid-row:2/span 4;position:relative;min-height:640px}
+.cluster{grid-column:8/-1;grid-row:2/span 4;position:relative;min-height:700px}
 .cluster figure{position:absolute;margin:0}
 .cluster figcaption{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-top:10px;display:flex;gap:10px}
 .cluster figcaption b{color:var(--pers);font-weight:600}
+.cluster figcaption{flex-wrap:wrap}
+.cluster figcaption>span:not(.fd){flex:1 1 0;min-width:0}
+.cluster figcaption .fd{flex-basis:100%;font-family:Instr,Georgia,serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:0;font-size:clamp(17px,1.4vw,22px);line-height:1.2;margin-top:2px}
 .f1{width:80%;right:-10%;top:-2%;display:flex;flex-direction:column-reverse}
 .f1 figcaption{margin:0 0 10px 14%}
 .f2{width:46%;left:-8%;top:56%}
@@ -208,11 +211,13 @@ a{color:inherit}
  .menu .copy{margin-top:28px}
  .menu h2 .s{white-space:normal;font-size:.56em;margin-left:0}
  .cluster{grid-row:auto;min-height:0;height:136vw;margin-top:36px}
+ .dine .num{padding-right:30vw}
+ .dine .num b{flex:none}
  .f1{width:86%;right:-12%;top:0}
  .f1 figcaption{margin-left:0}
  .f2{width:52%;left:-4%;top:58%}
  .f3{width:40%;right:0;top:78%}
- .sides{grid-row:auto;flex-wrap:wrap;gap:14px}
+ .sides{grid-row:auto;flex-wrap:wrap;gap:14px;margin-top:104px}
  .dine .w1,.dine .w2{font-size:21vw}
  .dine .bowl2{width:40vw;right:-12vw;top:24px}
  .dine .sl{font-size:30vw;text-align:left;margin:.02em 0}
@@ -237,12 +242,12 @@ a{color:inherit}
     <nav aria-label="Sections"><a href="#build">The bowl</a><a href="#menu">The menu</a><a href="#visit">2027</a></nav>
     <span class="tag cap"><span class="dot" aria-hidden="true"></span>Opening 2027 · UAE</span>
   </div>
-  <h1 class="d"><span class="l1">Fresh.</span><span class="l2">Healthy.</span><span class="l3">Filling.</span></h1>
+  <h1 class="d"><span class="l1">Big bowls.</span><span class="l2">Small menu.</span><span class="l3">No waiting<br> around.</span></h1>
   <div class="kv k" aria-hidden="true">ボウル</div>
-  <div class="bowl"><img id="spin" src="assets/img/bowl-hero.webp" width="1200" height="1321" alt="A rice bowl seen from above, colourful toppings over rice" fetchpriority="high"></div>
+  <div class="bowl"><img id="spin" src="assets/img/bowl-hero.webp" width="1200" height="1321" alt="An Asian bowl seen from above, colourful toppings over rice" fetchpriority="high"></div>
   <div class="foot">
-    <a class="meta cue cap" href="#build"><i aria-hidden="true"></i>Scroll to build a bowl</a>
-    <p>Rice bowls, made to order. Dine in or take away. Opening in the UAE in 2027.</p>
+    <a class="meta cue cap" href="#build"><i aria-hidden="true"></i>Scroll down. Get hungry.</a>
+    <p>Asian bowls, made to order. Opening in the UAE, 2027.</p>
   </div>
 </header>
 
@@ -250,7 +255,7 @@ a{color:inherit}
 <section class="build dark grain" id="build" aria-labelledby="build-h">
   <div class="build-head">
     <p class="num"><b>№ 01</b> Build a bowl</p>
-    <h2 class="d" id="build-h">Four layers. <span class="s">One bowl.</span></h2>
+    <h2 class="d" id="build-h">Four steps. <span class="s">Quick and fresh.</span></h2>
   </div>
   <div class="scrolly">
     <div class="stage" data-step="1" aria-hidden="true">
@@ -299,62 +304,61 @@ a{color:inherit}
     </div>
     <ol class="steps" role="list">
       <li class="step" data-i="1">
-        <p class="cap">Layer 01 <em>/ 04</em></p>
-        <h3 class="d">Rice.</h3>
-        <p class="fav">Built on rice.<br>Every bowl starts here.</p>
+        <p class="cap">Step 01 <em>/ 04</em></p>
+        <h3 class="d">Start with rice.</h3>
+        <p class="fav">White or brown, steamed fresh. Or swap it for greens.</p>
       </li>
       <li class="step" data-i="2">
-        <p class="cap">Layer 02 <em>/ 04</em></p>
-        <h3 class="d">Protein.</h3>
-        <p>The part that keeps you full.</p>
+        <p class="cap">Step 02 <em>/ 04</em></p>
+        <h3 class="d">Add the good stuff.</h3>
+        <p>Tempura shrimp, beef, chicken or dumplings. Cooked hot, served straight away.</p>
       </li>
       <li class="step" data-i="3">
-        <p class="cap">Layer 03 <em>/ 04</em></p>
-        <h3 class="d long">Greens &amp; crunch.</h3>
-        <p>Colour, freshness and bite.</p>
+        <p class="cap">Step 03 <em>/ 04</em></p>
+        <h3 class="d long">Pile on the crunch and vitamins.</h3>
+        <p>Pickles, fresh veg and a little heat.</p>
       </li>
       <li class="step" data-i="4">
-        <p class="cap">Layer 04 <em>/ 04</em></p>
-        <h3 class="d long">Sauce &amp; topping.</h3>
-        <p class="fav">Made to order.<br>Fresh, colourful, fast.</p>
+        <p class="cap">Step 04 <em>/ 04</em></p>
+        <h3 class="d long">Finish it properly.</h3>
+        <p class="fav">Every bowl gets its own sauce. No two taste the same.</p>
       </li>
     </ol>
   </div>
 </section>
 
 <div class="band" aria-hidden="true"><div class="track">
-  <span class="d">Fresh. Healthy. Filling. <span class="k">ボウル</span></span><span class="d">Fresh. Healthy. Filling. <span class="k">ボウル</span></span>
-  <span class="d">Fresh. Healthy. Filling. <span class="k">ボウル</span></span><span class="d">Fresh. Healthy. Filling. <span class="k">ボウル</span></span>
+  <span class="d">Asian bowls. Made to order. <span class="k">ボウル</span> Hot, fresh, filling. <span class="k">ボウル</span></span><span class="d">Asian bowls. Made to order. <span class="k">ボウル</span> Hot, fresh, filling. <span class="k">ボウル</span></span>
+  <span class="d">Asian bowls. Made to order. <span class="k">ボウル</span> Hot, fresh, filling. <span class="k">ボウル</span></span><span class="d">Asian bowls. Made to order. <span class="k">ボウル</span> Hot, fresh, filling. <span class="k">ボウル</span></span>
 </div></div>
 
 <section class="menu grain" id="menu" aria-labelledby="menu-h">
   <p class="num"><b>№ 02</b> The menu</p>
-  <h2 class="d" id="menu-h">A short menu. <span class="s">Of bowls, made to order.</span></h2>
+  <h2 class="d" id="menu-h">Eight bowls. <span class="s">Pick a favourite.</span></h2>
   <div class="cluster" aria-hidden="true">
-    <figure class="f1"><img src="assets/img/bowl-chicken.webp" width="760" height="836" alt="" loading="lazy" decoding="async"><figcaption><b>Fig. 1</b> Tempura Shrimp</figcaption></figure>
-    <figure class="f2"><img src="assets/img/bowl-veggie.webp" width="760" height="762" alt="" loading="lazy" decoding="async"><figcaption><b>Fig. 2</b> Vegetarian Dumplings</figcaption></figure>
-    <figure class="f3"><img src="assets/img/bowl-meat.webp" width="760" height="615" alt="" loading="lazy" decoding="async"><figcaption><b>Fig. 3</b> Beef</figcaption></figure>
+    <figure class="f1"><img src="assets/img/bowl-chicken.webp" width="760" height="836" alt="" loading="lazy" decoding="async"><figcaption><b>Fig. 1</b><span>Tempura Shrimp</span><span class="fd">Golden, crisp and gone in minutes.</span></figcaption></figure>
+    <figure class="f2"><img src="assets/img/bowl-veggie.webp" width="760" height="762" alt="" loading="lazy" decoding="async"><figcaption><b>Fig. 2</b><span>Vegetarian Dumplings</span><span class="fd">Soft dumplings, big flavour, zero meat.</span></figcaption></figure>
+    <figure class="f3"><img src="assets/img/bowl-meat.webp" width="760" height="615" alt="" loading="lazy" decoding="async"><figcaption><b>Fig. 3</b><span>Beef</span><span class="fd">Tender, rich and seriously satisfying.</span></figcaption></figure>
   </div>
-  <p class="copy">Pick a bowl. Every one starts with rice and is put together when you order it, so it comes to you fresh.</p>
-  <div class="sides"><span class="plus" aria-hidden="true">+</span><span class="s">Add sides and drinks</span><p class="sides-list">Kimchi, spring rolls, Karage, Dumplings, Japanese sodas</p></div>
+  <div class="sides"><span class="plus" aria-hidden="true">+</span><span class="s">Sides and drinks</span><p class="sides-list">Kimchi, spring rolls, Karaage, Dumplings, Japanese sodas</p></div>
 </section>
 
 <section class="dine grain" aria-labelledby="dine-h">
-  <p class="num"><b>№ 03</b> Eat here, or don’t</p>
-  <h2 class="sr" id="dine-h">Dine in or take away</h2>
+  <p class="num"><b>№ 03</b> Sit down or take it to go.</p>
+  <h2 class="sr" id="dine-h">Sit down or take it to go.</h2>
   <img class="bowl2" src="assets/img/bowl-salmon.webp" width="760" height="863" alt="" loading="lazy" decoding="async">
   <p class="d w1" aria-hidden="true">Dine in.</p>
   <p class="d sl" aria-hidden="true">/</p>
   <p class="d w2" aria-hidden="true"><span class="s">Take</span> away.</p>
-  <p class="body">Sit down with a bowl, or take it with you. Same bowl, made to order either way.</p>
+  <p class="body">Grab a seat in the mall, or carry it back to work. It travels well.</p>
 </section>
 
 <section class="finale dark grain" id="visit" aria-labelledby="fin-h">
   <p class="num"><b>№ 04</b> Coming soon</p>
   <p class="d yr" aria-hidden="true">2027<span class="k">ボウル</span></p>
   <div class="fin-row">
-    <h2 class="d" id="fin-h">Opening in <span class="s">the UAE.</span></h2>
-    <p>Boru opens its doors in 2027. Rice bowls made to order — fresh, healthy, filling.</p>
+    <h2 class="d" id="fin-h">Opening in <span class="s">the UAE, 2027.</span></h2>
+    <p>Your next lunch spot is on its way.</p>
   </div>
   <div class="legal"><img src="assets/img/wordmark-cream.webp" width="240" height="82" alt="Boru" loading="lazy"><span>Opening 2027 · UAE · Dine in &amp; take away</span><span>© 2026 Boru</span></div>
 </section>
